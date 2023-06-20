@@ -23,7 +23,6 @@ function areYouPlayingBanjo(name) {
 }
 
 // Test cases
-
 console.log(areYouPlayingBanjo("Jackie")); // Jackie does not play banjo
 console.log(areYouPlayingBanjo("Rocky"));  // Rocky plays banjo
 console.log(areYouPlayingBanjo("Adam"));   // "Adam does not play banjo"

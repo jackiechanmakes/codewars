@@ -16,7 +16,7 @@ function reverseString(word) {
 }
 
 
-// Testcases
+// Test cases
 console.log(reverseString("world")); // "dlrow"
 console.log(reverseString("word")); // "drow"
 console.log(reverseString("")); // ""
