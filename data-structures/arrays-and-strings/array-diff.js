@@ -10,18 +10,7 @@
  */
 
 function arrayDiff(arrA, arrB) {
-    let result = arrA;
-
-    for (let i = 0; i < arrB.length; i++) {
-        forbiddenLetter = arrB[i];
-
-        while (result.indexOf(forbiddenLetter) !== -1) {
-            let index = result.indexOf(forbiddenLetter);
-            result.splice(index, 1);
-        }
-    }
-
-    return result;
+   return arrA.filter(letter => !arrB.includes(letter));
 }
 
 // Test cases
