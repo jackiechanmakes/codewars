@@ -8,17 +8,7 @@
  */
 
 function spinWords(str) {
-    let words = str.split(' ');
-
-    for (let i = 0; i < words.length; i++) {
-        let word = words[i];
-
-        if (word.length >= 5) {
-            words[i] = word.split('').reverse().join('');
-        }
-    }
-
-    return words.join(' ');
+    return str.split(' ').map(word => word.length < 5 ? word : word.split('').reverse().join('')).join(' ');
 }
 
 // Test cases
