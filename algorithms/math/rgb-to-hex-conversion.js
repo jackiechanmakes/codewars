@@ -13,13 +13,9 @@
 
 function rgb(red, green, blue) {
     // Data process values for validity
-    red = red < 0 ? 0 : red;
-    green = green < 0 ? 0 : green;
-    blue = blue < 0 ? 0 : blue;
-
-    red = red > 255 ? 255 : red;
-    green = green > 255 ? 255 : green;
-    blue = blue > 255 ? 255 : blue;
+    red = Math.max(0, Math.min(255, red));
+    green = Math.max(0, Math.min(255, green));
+    blue = Math.max(0, Math.min(255, blue));
 
     // Get quotients
     let redQuotient = Math.floor(red / 16);
