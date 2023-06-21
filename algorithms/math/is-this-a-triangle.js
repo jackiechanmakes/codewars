@@ -7,11 +7,7 @@
 function isTriangle(side1, side2, side3) {
     // Triangle Inequality Theorem - the sum of the lengths of any two sides of a triangle must be greater than the lengths
     // of the third side
-    if (side1 + side2 > side3 && side1 + side3 > side2 && side2 + side3 > side1) {
-        return true;
-    }
-
-    return false;
+    return side1 + side2 > side3 && side1 + side3 > side2 && side2 + side3 > side1;
 }
 
 // Test cases
