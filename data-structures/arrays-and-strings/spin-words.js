@@ -8,33 +8,17 @@
  */
 
 function spinWords(str) {
-    let result = [];
-    let words = str.split(" ");
+    let words = str.split(' ');
 
     for (let i = 0; i < words.length; i++) {
         let word = words[i];
 
-        if (word.length < 5) {
-            result.push(word);
-        } else {
-            let wordReversed = reverseWord(word);
-            result.push(wordReversed);
+        if (word.length >= 5) {
+            words[i] = word.split('').reverse().join('');
         }
     }
 
-    return result.join(' ');
-}
-
-function reverseWord(word) {
-    let result = "";
-
-    for (let i = word.length - 1; 0 <= i; i--) {
-        let letter = word[i];
-
-        result += letter;
-    }
-
-    return result;
+    return words.join(' ');
 }
 
 // Test cases
