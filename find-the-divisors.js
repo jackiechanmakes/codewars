@@ -6,19 +6,15 @@
  */
 
 function divisors(integer) {
-    let result = [];
+    var result = [];
 
-    for (let i = 2; i < integer; i++) {
+    for (let i = 2; i <= Math.floor(integer / 2); i++) {
         if (integer % i === 0) {
             result.push(i);
         }
     }
 
-    if (result.length === 0) {
-        return `${integer} is prime`;
-    }
-
-    return result;
+    return result.length ? result : integer + ' is prime';
 }
 
 // Test cases
