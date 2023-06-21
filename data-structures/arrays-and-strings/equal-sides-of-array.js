@@ -33,13 +33,18 @@
  * If you are given an array with multiple answers, return the lowest correct index.
  */
 
-function findEqualIndex(arr)
-{
-    for (let i = 0; i < arr.length; i++) {
-        let sumLeft = arr.slice(0, i).reduce((accumulator, currentValue) => accumulator + currentValue, 0);
-        let sumRight = arr.slice(i + 1).reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+function findEqualIndex(arr) {
+    let leftSum = 0;
+    let rightSum = arr.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
 
-        if (sumLeft === sumRight) {
+    for (let i = 0; i < arr.length; i++) {
+        if (i > 0) {
+            leftSum += arr[i - 1];
+        }
+
+        rightSum -= arr[i];
+
+        if (leftSum === rightSum) {
             return i;
         }
     }
