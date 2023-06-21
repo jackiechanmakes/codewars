@@ -11,35 +11,13 @@
  */
 
 function duplicateEncode(word) {
-    word = word.toLowerCase();
-    let dictCount = count(word);
-    let result = "";
-
-    for (let i = 0; i < word.length; i++) {
-        let letter = word[i];
-        if (dictCount[letter] > 1) {
-            result += ")";
-        } else {
-            result += "(";
-        }
-    }
-
-    return result;
-}
-
-function count(word) {
-    let dict = {};
-
-    for (let i = 0; i < word.length; i++) {
-        let letter = word[i];
-        if (letter in dict) {
-            dict[letter]++;
-        } else {
-            dict[letter] = 1;
-        }
-    }
-
-    return dict;
+    return word
+    .toLowerCase()
+    .split('')
+    .map(function(currentValue, index, arr) {
+        return arr.indexOf(currentValue) === arr.lastIndexOf(currentValue) ? '(' : ')';
+    })
+    .join('');
 }
 
 // Test cases
