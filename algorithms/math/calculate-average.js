@@ -4,20 +4,7 @@
  */
 
 function findAverage(array) {
-    let sum = 0;
-    let count = array.length;
-
-    if (count === 0) {
-        return 0;
-    }
-
-    for (let i = 0; i < array.length; i++) {
-        let number = array[i];
-        sum += number;
-    }
-
-    let avg = sum / count;
-    return avg;
+    return array.length ? array.reduce((accumulator, currentValue) => accumulator + currentValue, 0) / array.length : 0;
 }
 
 // Test cases
