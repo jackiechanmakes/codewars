@@ -12,40 +12,19 @@
  */
 
 function rgb(red, green, blue) {
-    // Data process values for validity
-    red = Math.max(0, Math.min(255, red));
-    green = Math.max(0, Math.min(255, green));
-    blue = Math.max(0, Math.min(255, blue));
-
-    // Get quotients
-    let redQuotient = Math.floor(red / 16);
-    let greenQuotient = Math.floor(green / 16);
-    let blueQuotient = Math.floor(blue / 16);
-
-    // Get remainders
-    let redRemainder = red % 16;
-    let greenRemainder = green % 16;
-    let blueRemainder = blue % 16;
-
-    return hex(redQuotient) + hex(redRemainder) + hex(greenQuotient) + hex(greenRemainder) + hex(blueQuotient) + hex(blueRemainder);
+    return toHex(red) + toHex(green) + toHex(blue);
 }
 
-function hex(num) {
-    if (num === 10) {
-        return 'A';
-    } else if (num === 11) {
-        return 'B';
-    } else if (num === 12) {
-        return 'C';
-    } else if (num === 13) {
-        return 'D';
-    } else if (num === 14) {
-        return 'E';
-    } else if (num === 15) {
-        return 'F';
-    } else {
-        return num.toString();
+function toHex(num) {
+    if (num < 0) {
+        return '00';
     }
+
+    if (num > 255) {
+        return 'FF';
+    }
+
+    return ('0' + num.toString(16)).slice(-2).toUpperCase();
 }
 
 // Test cases
