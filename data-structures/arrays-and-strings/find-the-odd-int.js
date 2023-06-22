@@ -12,18 +12,14 @@
  */
 
 function findOdd(array) {
-    let dict = {};
-    for (let i = 0; i < array.length; i++) {
-        let num = array[i];
-        if (num in dict) {
-            dict[num]++;
-        } else {
-            dict[num] = 1;
-        }
-    }
-
-    return array.filter(num => dict[num] % 2 === 1)[0];
+    return array.reduce((previousResult, currentValue) => previousResult ^ currentValue, 0);
 }
+
+// function findOdd(array) {
+//     let obj = {};
+//     array.forEach(element => obj[element] ? obj[element]++ : obj[element] = 1);
+//     return array.filter(num => obj[num] % 2 === 1)[0];
+// }
 
 // Test cases
 console.log(findOdd([7]));                                        // 7
