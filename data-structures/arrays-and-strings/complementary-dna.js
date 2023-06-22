@@ -16,22 +16,13 @@
  */
 
 function DNAStrand(dna){
-    return dna.split('').map(base => complementaryDnaMap(base)).join('');
-}
-
-function complementaryDnaMap(base) {
-  switch (base) {
-    case 'A':
-      return 'T';
-    case 'T':
-      return 'A';
-    case 'C':
-      return 'G';
-    case 'G':
-      return 'C';
-    default:
-      console.log("Invalid letter inputted!");
-  }
+  let pairs = {
+    'A': 'T',
+    'T': 'A',
+    'C': 'G',
+    'G': 'C'
+  };
+  return dna.split('').map(base => pairs[base]).join('');
 }
 
 // Test cases
