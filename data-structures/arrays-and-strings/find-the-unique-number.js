@@ -14,13 +14,14 @@
  * */
 
 function findUniq(arr) {
-  let obj = {};
-  arr.forEach(element => obj[element] ? obj[element]++ : obj[element] = 1);
-
-  let result = Object.keys(obj).filter(objKey => obj[objKey] === 1);
-  return Number(result[0]);
+  for (let i = 0; i < arr.length; i++) {
+    let element = arr[i];
+    if (arr.indexOf(element) === arr.lastIndexOf(element)) {
+      return element
+    }
+  }
+  return undefined;
 }
-
 
 // Test cases
 console.log(findUniq([ 1, 0, 0 ]));           // 1
