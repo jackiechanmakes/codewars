@@ -14,13 +14,7 @@
  * */
 
 function findUniq(arr) {
-  for (let i = 0; i < arr.length; i++) {
-    let element = arr[i];
-    if (arr.indexOf(element) === arr.lastIndexOf(element)) {
-      return element
-    }
-  }
-  return undefined;
+  return +arr.filter(element => arr.indexOf(element) === arr.lastIndexOf(element));
 }
 
 // Test cases
