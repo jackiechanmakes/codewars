@@ -14,7 +14,7 @@
  * */
 
 function findUniq(arr) {
-  return +arr.filter(element => arr.indexOf(element) === arr.lastIndexOf(element));
+  return arr.find(element => arr.indexOf(element) === arr.lastIndexOf(element));
 }
 
 // Test cases
