@@ -9,7 +9,7 @@
  */
 
 function persistence(num) {
-    return `${num}`.length > 1 ? 1 + persistence(`${num}`.split('').reduce((accumulator, currentValue) => accumulator * +currentValue)) : 0;
+    return `${num}`.length > 1 ? 1 + persistence(`${num}`.split('').reduce((accumulator, currentValue) => accumulator * currentValue)) : 0;
 }
 
 // function persistence(num) {
