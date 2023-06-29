@@ -9,15 +9,19 @@
  */
 
 function persistence(num) {
-    let count = 0;
-
-    while (num >= 10) {
-        num = num.toString().split('').reduce((accumulator, currentValue) => accumulator * currentValue, 1);
-        count++;
-    }
-
-    return count;
+    return `${num}`.length > 1 ? 1 + persistence(`${num}`.split('').reduce((accumulator, currentValue) => accumulator * +currentValue)) : 0;
 }
+
+// function persistence(num) {
+//     let count = 0;
+
+//     while (num >= 10) {
+//         num = num.toString().split('').reduce((accumulator, currentValue) => accumulator * currentValue, 1);
+//         count++;
+//     }
+
+//     return count;
+// }
 
 // Test cases
 console.log(persistence(39)); // 3
