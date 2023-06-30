@@ -7,10 +7,14 @@
  * "a234"   -->  false
  */
 
-function validatePIN (pin) {
-    const pattern = /^\d+$/;
-    return (pin.length === 4 || pin.length === 6) && pattern.test(pin);
+function validatePIN(pin) {
+    return /^(\d{4}|\d{6})$/.test(pin);
 }
+
+// function validatePIN (pin) {
+//     const pattern = /^\d+$/;
+//     return (pin.length === 4 || pin.length === 6) && pattern.test(pin);
+// }
 
 // Test cases
 console.log(validatePIN("1"));        // false
