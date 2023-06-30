@@ -7,8 +7,7 @@
  */
 
 function abbrevName(name){
-    let initials = name.split(' ').map(element => element[0].toUpperCase());
-    return `${initials[0]}.${initials[1]}`;
+    return name.split(' ').map(element => element[0].toUpperCase()).join('.');
 }
 
 // Test cases
