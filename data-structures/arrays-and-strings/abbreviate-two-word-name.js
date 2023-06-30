@@ -7,9 +7,8 @@
  */
 
 function abbrevName(name){
-
-    // code away
-
+    let names = name.split(' ');
+    return `${names[0][0]}.${names[1][0]}`;
 }
 
 // Test cases
