@@ -7,7 +7,11 @@
  */
 
 function repeatStr (n, s) {
-    return '';
+    if (n === 0) {
+        return '';
+    }
+
+    return s + repeatStr(n - 1, s);
 }
 
 // Test cases
