@@ -8,7 +8,8 @@
  */
 
 function validatePIN (pin) {
-    //return true or false
+    const pattern = /^\d+$/;
+    return (pin.length === 4 || pin.length === 6) && pattern.test(pin);
 }
 
 // Test cases
