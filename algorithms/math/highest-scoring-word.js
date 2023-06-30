@@ -9,6 +9,12 @@
  * All letters will be lowercase and all inputs will be valid.
  */
 
+function high(str) {
+    let words = str.split(' ');
+    let scores = words.map(word => word.split('').map(letter => (letter.charCodeAt(0) - 97) + 1).reduce((accumulator, currentValue) => accumulator + currentValue));
+    let max = Math.max(...scores);
+    return words[scores.indexOf(max)];
+}
 
 
 // Test cases
