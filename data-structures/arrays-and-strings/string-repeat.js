@@ -7,12 +7,12 @@
  */
 
 function repeatStr (n, s) {
-    if (n === 0) {
-        return '';
-    }
-
-    return s + repeatStr(n - 1, s);
+    return n > 1 ? s + repeatStr(--n, s) : s;
 }
+
+// function repeatStr (n, s) {
+//     return s.repeat(n);
+// }
 
 // Test cases
 console.log(repeatStr(3, "*"));    // "***"
