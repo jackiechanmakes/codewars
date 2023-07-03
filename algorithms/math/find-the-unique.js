@@ -12,8 +12,17 @@
  */
 
 function findUniq(arr) {
-    return arr.filter(element => arr.indexOf(element) === arr.lastIndexOf(element))[0];
+    for (let i = 0; i < arr.length; i++) {
+        let element = arr[i];
+        if (!Number.isNaN(element) && arr.indexOf(element) === arr.lastIndexOf(element)) {
+            return element;
+        }
+    }
 }
+
+// function findUniq(arr) {
+//     return arr.filter(element => arr.indexOf(element) === arr.lastIndexOf(element))[0];
+// }
 
 // Test cases
 console.log(findUniq([ 1, 1, 1, 2, 1, 1 ]));   // 2
