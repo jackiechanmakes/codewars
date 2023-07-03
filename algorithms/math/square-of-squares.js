@@ -23,12 +23,12 @@
  */
 
 var isSquare = function(n){
-    for (let i = 0; i <= n / 2; i++) {
+    for (let i = 0; i <= n; i++) {
         if (i * i === n) {
             return true;
         }
     }
-    return false; // fix me
+    return false;
 }
 
 // Test cases
