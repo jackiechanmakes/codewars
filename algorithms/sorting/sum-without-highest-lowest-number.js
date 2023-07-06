@@ -15,6 +15,19 @@
  * or the given array is an empty list or a list with only 1 element, return 0.
  */
 
+function sumArray(arr) {
+    if (!Array.isArray(arr) || arr.length <= 1) {
+        return 0;
+    }
+
+    return arr.sort((num1, num2) => num1 - num2).reduce((accum, curr, index, arr) => {
+        if (index === 0 || index === arr.length - 1) {
+            return accum;
+        }
+        return accum + curr;
+    }, 0);
+}
+
 // Test cases
 console.log(sumArray(null));                       // 0
 console.log(sumArray([ ]));                        // 0
