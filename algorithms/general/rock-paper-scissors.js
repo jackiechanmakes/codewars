@@ -9,18 +9,16 @@
  */
 
 function rps(player1, player2) {
-    let winCombo = {
+    let map = {
         'rock' : 'scissors',
         'scissors' : 'paper',
         'paper' : 'rock'
     };
 
-    if (winCombo[player1] === player2) {
-        return "Player 1 won!";
-    } else if (winCombo[player2] === player1) {
-        return "Player 2 won!";
-    } else if (player1 === player2) {
-        return "Draw!"
+    if (player1 === player2) {
+        return "Draw!";
+    } else {
+        return `Player ${map[player1] === player2 ? 1 : 2} won!`
     }
 }
 
