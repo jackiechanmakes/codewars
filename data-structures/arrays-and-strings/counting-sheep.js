@@ -14,6 +14,14 @@
  * The correct answer would be 17.
  */
 
+function countSheeps(sheeps) {
+    return sheeps.filter(Boolean).length;
+}
+
+// function countSheeps(sheeps) {
+//     return sheeps.reduce((accum, curr) => curr ? ++accum : accum, 0);
+// }
+
 // Test cases
 var array1 = [true,  true,  true,  false,
     true,  true,  true,  true ,
