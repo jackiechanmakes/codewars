@@ -11,6 +11,11 @@
  * For calculating the average point you may add your point to the given array!
  */
 
+function betterThanAverage(scores, myScore) {
+    let avg = scores.reduce((accu, curr) => accu + curr, myScore) / (scores.length + 1);
+    return myScore > avg;
+}
+
 // Test cases
 console.log(betterThanAverage([2, 3], 5));                                // true
 console.log(betterThanAverage([100, 40, 34, 57, 29, 72, 57, 88], 75));    // true

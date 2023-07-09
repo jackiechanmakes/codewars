@@ -8,6 +8,22 @@
  * You can assume, for the purpose of this kata, that the supplied array will not be empty.
  */
 
+/* Solution #1 - using Math.min() */
+// function findSmallestInt(nums) {
+//     return Math.min(...nums);
+// }
+
+/* Solution #2 - using reduce() */
+function findSmallestInt(nums) {
+    return nums.reduce((accu, curr) => curr < accu ? accu = curr : accu, Infinity);
+}
+
+/* Solution #3 - using sort() */
+// function findSmallestInt(nums) {
+//     return nums.sort((a,b) => a - b)[0];
+// }
+
+// Test cases
 console.log(findSmallestInt([78,56,232,12,8]));     // 8
 console.log(findSmallestInt([78,56,232,12,18]));    // 12
 console.log(findSmallestInt([78,56,232,412,228]));  // 56

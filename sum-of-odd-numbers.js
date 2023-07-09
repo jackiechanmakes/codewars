@@ -14,6 +14,9 @@
  * 2 --> 3 + 5 = 8
  */
 
+function rowSumOddNumbers(row) {
+}
+
 // Test cases
 console.log(rowSumOddNumbers(1));  // 1
 console.log(rowSumOddNumbers(42)); // 74088

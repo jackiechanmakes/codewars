@@ -9,10 +9,10 @@
  * "-7" --> -7
  */
 
+// Can also use Number(), double tilde operator, multiply by 1, parseInt(), Math.floor()
 const stringToNumber = function(str){
-    // put your code here
-    return null;
-  }
+    return +str;
+}
 
 // Test cases
 console.log(stringToNumber("1234"));    // 1234

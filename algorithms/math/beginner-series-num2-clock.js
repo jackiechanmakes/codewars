@@ -17,7 +17,11 @@
  */
 
 function past(hour, minute, second) {
+    let numMinsPerHr = 60;
+    let numSecsPerMin = 60;
+    let numMillisecsPerSec = 1000;
 
+    return numMillisecsPerSec * (hour * numMinsPerHr * numSecsPerMin + minute * numSecsPerMin + second);
 }
 
 // Test cases
