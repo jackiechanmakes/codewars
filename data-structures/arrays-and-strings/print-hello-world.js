@@ -31,5 +31,10 @@
  * type the console.log() in the next line (don't forget to put the str in the parentheses).
  */
 
+function helloWorld() {
+    let str = "Hello World!";
+    console.log(str);
+}
+
 // Test cases
-printWordToScreen(); // "Hello World!"
+helloWorld(); // "Hello World!"

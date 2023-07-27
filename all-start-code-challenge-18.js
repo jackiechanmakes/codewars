@@ -17,6 +17,9 @@
  * the second argument will be a string of length 1
  */
 
+function strCount(word, letter) {
+}
+
 // Test cases
 console.log(strCount('Hello', 'o'));  // 1
 console.log(strCount('Hello', 'l'));  // 2

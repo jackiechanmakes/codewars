@@ -16,6 +16,10 @@
  * 'G', 'C', 'A' and/or 'T'.
  */
 
+function DNAtoRNA(sequence) {
+    return sequence.split('').map(el => el === 'T' ? 'U' : el).join('');
+}
+
 // Test cases
 console.log(DNAtoRNA("TTTT"));        // "UUUU"
 console.log(DNAtoRNA("GCAT"));        // "GCAU"

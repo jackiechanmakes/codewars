@@ -10,9 +10,13 @@
  * Floats with decimal part non equal to zero are considered UNeven for this kata.
  */
 
+function testEven(num) {
+    return num % 2 === 0;
+}
+
 // Test cases
 console.log(testEven(0));     // true
 console.log(testEven(0.5));   // false
 console.log(testEven(1));     // false
 console.log(testEven(2));     // true
-console.log(testEven(-4));    //  true
+console.log(testEven(-5));    //  true

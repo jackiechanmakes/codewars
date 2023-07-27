@@ -7,6 +7,10 @@
  * - "1234!_ "     -> "11223344!!__  "
  */
 
+function doubleChar(str) {
+    return str.split('').map(el => el + el).join('');
+}
+
 // Test cases
 console.log(doubleChar("abcd"));        // "aabbccdd"
 console.log(doubleChar("Adidas"));      // "AAddiiddaass"

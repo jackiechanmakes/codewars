@@ -18,6 +18,10 @@
  * Have fun!
  */
 
+function oddOrEven(arr) {
+    return arr.reduce((accu, curr) => accu + curr, 0) % 2 ? 'odd' : 'even';
+}
+
 // Test cases
 console.log(oddOrEven([0])); // 'even'
 console.log(oddOrEven([1])); // 'odd'

@@ -12,6 +12,10 @@
  * Note: keep the original order of the names in the output.
  */
 
+function friend(names) {
+    return names.filter(el => el.length === 4);
+}
+
 // Test cases
 console.log(friend(["Ryan", "Kieran", "Mark"]));                                        // ["Ryan", "Mark"]
 console.log(friend(["Ryan", "Jimmy", "123", "4", "Cool Man"]));                         // ["Ryan"]

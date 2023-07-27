@@ -8,6 +8,10 @@
 * Function should return true if it is possible and false if not.
 */
 
+function zeroFuel(distance, mpg, gallons) {
+    return distance <= mpg * gallons;
+}
+
 // Test cases
 console.log(zeroFuel(50, 25, 2));   // true
 console.log(zeroFuel(100, 50, 1));  // false
