@@ -8,6 +8,16 @@
  * -34: 34
  */
 
+/* Alternate Solution #1 - in JS, 0 === -0 */
+function opposite(num) {
+    return -num;
+}
+
+/* Initial Solution */
+// function opposite(num) {
+//     return num === 0 ? 0 : -num;
+// }
+
 // Test cases
 console.log(opposite(1));                // -1
 console.log(opposite(0));                // 0

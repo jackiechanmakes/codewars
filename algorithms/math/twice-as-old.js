@@ -7,6 +7,10 @@
  * The answer is always greater or equal to 0, no matter if it was in the past or it is in the future.
  */
 
+function twiceAsOld(fatherAge, sonAge) {
+    return Math.abs(fatherAge - sonAge * 2);
+}
+
 // Test cases
 console.log(twiceAsOld(36,7));   // 22
 console.log(twiceAsOld(55,30));  //  5

@@ -8,6 +8,10 @@
  * https://en.wikipedia.org/wiki/Triangle
  */
 
+function otherAngle(angle1, angle2) {
+    return 180 - angle1 - angle2;
+}
+
 // Test cases
 console.log(otherAngle(30, 60));  // 90
 console.log(otherAngle(60, 60));  // 60
