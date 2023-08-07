@@ -5,6 +5,9 @@
  * Return your answer as a number.
  */
 
+function sumMix(list) {
+    return list.reduce((accu, curr) => accu + Number(curr), 0);
+}
 
 // Test cases
 console.log(sumMix([9, 3, '7', '3']));                       // 22

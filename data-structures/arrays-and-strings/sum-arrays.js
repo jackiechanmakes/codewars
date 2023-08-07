@@ -23,6 +23,10 @@
  * Advanced users may find this extremely easy and can easily write this in one line.
  */
 
+function sum(nums) {
+    return nums.reduce((accu, curr) => accu + curr, 0);
+}
+
 // Test cases
 console.log(sum([]));                  // 0
 console.log(sum([1, 5.2, 4, 0, -1]));  // 9.2
