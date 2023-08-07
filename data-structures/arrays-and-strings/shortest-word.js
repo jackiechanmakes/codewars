@@ -4,15 +4,21 @@
  * String will never be empty and you do not need to account for different data types.
  */
 
+/* Attempt #2 */
 function findShort(str) {
-    let words = str.split(' ');
-    return words.reduce(function (accu, curr) {
-        if (curr.length < accu) {
-            return curr.length;
-        }
-        return accu;
-    }, Infinity);
+    return Math.min(...str.split(' ').map(el => el.length));
 }
+
+/* Attempt #1 */
+// function findShort(str) {
+//     let words = str.split(' ');
+//     return words.reduce(function (accu, curr) {
+//         if (curr.length < accu) {
+//             return curr.length;
+//         }
+//         return accu;
+//     }, Infinity);
+// }
 
 // Test cases
 console.log(findShort("bitcoin take over the world maybe who knows perhaps"));                 // 3
