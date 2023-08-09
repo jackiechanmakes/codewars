@@ -22,6 +22,43 @@
  * http://www.slate.com/articles/news_and_politics/explainer/2009/05/a_dogs_life.html
  */
 
+/* Solution #2 */
+function humanYearsCatYearsDogYears(years) {
+    if (years === 1) {
+        return [1, 15, 15];
+    }
+
+    if (years === 2) {
+        return [2, 24, 24];
+    }
+
+    return [years, 24 + (years - 2) * 4, 24 + (years - 2) * 5];
+}
+
+/* Solution #1 */
+// function humanYearsCatYearsDogYears(humanYears) {
+//     let catYears = 0;
+//     let dogYears = 0;
+//     let numYears = humanYears;
+
+//     while (numYears) {
+//         if (numYears === 1) {
+//             catYears += 15;
+//             dogYears += 15;
+//         } else if (numYears === 2) {
+//             catYears += 9;
+//             dogYears += 9;
+//         } else {
+//             catYears += 4;
+//             dogYears += 5;
+//         }
+
+//         numYears--;
+//     }
+
+//     return [humanYears, catYears, dogYears];
+// }
+
 // Test cases
 console.log(humanYearsCatYearsDogYears(1));   // [1,15,15]
 console.log(humanYearsCatYearsDogYears(2));   // [2,24,24]

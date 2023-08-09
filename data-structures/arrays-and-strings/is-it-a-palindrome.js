@@ -4,6 +4,22 @@
  * such as madam or racecar, the date and time 12/21/33 12:21, and the sentence: "A man, a plan, a canal – Panama".
  */
 
+/* Solution #2 */
+function isPalindrome(str) {
+    return str.toLowerCase().split('').reverse().join('') === str.toLowerCase();
+}
+/* Solution #1 */
+// function isPalindrome(str) {
+//     str = str.toLowerCase();
+//     for (let i = 0; i < str.length / 2; i++) {
+//         if (str[i] !== str[str.length - 1 - i]) {
+//             return false;
+//         }
+//     }
+
+//     return true;
+// }
+
 // Test cases
 console.log(isPalindrome("a"));      // true
 console.log(isPalindrome("aba"));    // true

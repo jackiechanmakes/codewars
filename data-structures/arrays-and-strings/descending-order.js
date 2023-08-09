@@ -11,6 +11,10 @@
  * Input: 123456789 Output: 987654321
  */
 
+function descendingOrder(num) {
+    return +String(num).split('').sort().reverse().join('');
+}
+
 // Test cases
 console.log(descendingOrder(0));          // 0
 console.log(descendingOrder(1));          // 1
