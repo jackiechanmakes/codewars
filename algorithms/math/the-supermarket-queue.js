@@ -4,7 +4,8 @@
  * customers to check out!
  *
  * input
- * customers: an array of positive integers representing the queue. Each integer represents a customer, and its value is the amount of time they require to check out.
+ * customers: an array of positive integers representing the queue. Each integer represents a customer,
+ * and its value is the amount of time they require to check out.
  * n: a positive integer, the number of checkout tills.
  * output
  * The function should return an integer, the total time required.
@@ -30,8 +31,26 @@
  * The front person in the queue (i.e. the first element in the array/list) proceeds to a till as soon as it becomes free.
  * N.B. You should assume that all the test input will be valid, as specified above.
  *
- * P.S. The situation in this kata can be likened to the more-computer-science-related idea of a thread pool, with relation to running multiple processes at the same time: https://en.wikipedia.org/wiki/Thread_pool
+ * P.S. The situation in this kata can be likened to the more-computer-science-related idea
+ * of a thread pool, with relation to running multiple processes at the same time: https://en.wikipedia.org/wiki/Thread_pool
  */
+
+function queueTime(arr, numTills) {
+    let soln = Array(numTills).fill(0);
+
+    let index = 0;
+    while (index < arr.length) {
+        let element = arr[index];
+
+        let min = Math.min(...soln);
+        let minIndex = soln.indexOf(min);
+        soln[minIndex] += element;
+
+        index++;
+    }
+
+    return Math.max(...soln);
+}
 
 // Test cases
 console.log(queueTime([], 1));              // 0

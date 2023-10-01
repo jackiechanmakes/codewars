@@ -10,5 +10,10 @@
  * 5, 9 --> "1110" (5 + 9 = 14 in decimal or 1110 in binary)
  */
 
+function addBinary(num1, num2) {
+    let sum = num1 + num2;
+
+
+}
 // Test cases
 console.log(addBinary(1,2)); // '11'

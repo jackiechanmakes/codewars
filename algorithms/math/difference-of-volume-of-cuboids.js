@@ -12,6 +12,22 @@
  * If you can, try writing it in one line of code.
  */
 
+/* Solution #2 */
+function findDifference(arr1, arr2) {
+    return Math.abs(getVolume(arr1) - getVolume(arr2));
+}
+
+function getVolume(arr) {
+    return arr.reduce((accu, curr) => curr * accu, 1);
+}
+
+/* Solution #1 */
+// function findDifference(arr1, arr2) {
+//     let vol1 = arr1.reduce((accu, curr) => accu * curr, 1);
+//     let vol2 = arr2.reduce((accu, curr) => accu * curr, 1);
+//     return Math.abs(vol1 - vol2);
+// }
+
 // Test cases
 console.log(findDifference([3, 2, 5], [1, 4, 4]));        // 14
 console.log(findDifference([9, 7, 2], [5, 2, 2]));        // 106

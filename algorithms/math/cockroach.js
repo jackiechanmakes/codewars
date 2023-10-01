@@ -8,6 +8,19 @@
  * The result should be an Integer.
  */
 
+/* Solution #2 */
+function cockroachSpeed(speedKmPerHour) {
+    let secsInHour = 1 * 60 * 60;
+    let cmInKm = 1 * 1000 * 100;
+    return Math.floor(speedKmPerHour / secsInHour * cmInKm);
+}
+
+/* Solution #1 */
+// function cockroachSpeed(speedKmPerHour) {
+//     return Math.floor(speedKmPerHour / (60 * 60) * 100000);
+
+// }
+
 // Test cases
 console.log(cockroachSpeed(1.08));  // 30
 console.log(cockroachSpeed(1.09));  // 30

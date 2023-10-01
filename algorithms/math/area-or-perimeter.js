@@ -10,6 +10,16 @@
  * otherwise it is a rectangle.
  */
 
+/* Solution #2 */
+function areaOrPerimeter(side1, side2) {
+    return side1 === side2 ? side1 * side2 : 2 * (side1 + side2);
+}
+
+/* Solution #1 */
+// function areaOrPerimeter(side1, side2) {
+//     return side1 === side2 ? side1 * side2 : side1 * 2 + side2 * 2;
+// }
+
 // Test cases
 console.log(areaOrPerimeter(3,  3)); //  9
 console.log(areaOrPerimeter(6, 10)); // 32

@@ -17,7 +17,21 @@
  * the second argument will be a string of length 1
  */
 
+/* Solution #2 */
+// function strCount(str, letter){
+//     return str.split(letter).length-1
+// }
+
+/* Solution #1 */
 function strCount(word, letter) {
+    return word.split('').reduce(
+        function(accu, curr) {
+            if (curr === letter) {
+                accu++;
+            }
+            return accu;
+        }, 0
+    );
 }
 
 // Test cases

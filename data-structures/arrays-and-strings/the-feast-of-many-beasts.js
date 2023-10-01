@@ -11,6 +11,10 @@
  * end of the string. They will not contain numerals.
  */
 
+function feast(animal, dish) {
+    return animal[0] === dish[0] && animal[animal.length - 1] === dish[dish.length - 1];
+}
+
 // Test cases
 console.log(feast("great blue heron", "garlic naan"));  // true
 console.log(feast("chickadee", "chocolate cake"));      // true
