@@ -16,6 +16,10 @@
  * However, the arrays can have varying lengths, not just limited to 4.
  */
 
+function binaryArrayToNumber(arr) {
+    return arr.reverse().reduce((accu, curr, ind) => accu += curr * Math.pow(2, ind), 0);
+}
+
 // Test cases
 console.log(binaryArrayToNumber([0,0,0,1])); // 1
 console.log(binaryArrayToNumber([0,0,1,0])); // 2

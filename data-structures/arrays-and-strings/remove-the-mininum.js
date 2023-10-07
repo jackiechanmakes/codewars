@@ -21,6 +21,20 @@
  * - Input: [2,2,1,2,1], output = [2,2,2,1]
  */
 
+/* Solution #2 */
+function removeSmallest(arr) {
+    let min = Math.min(...arr);
+    let minIndex = arr.indexOf(min);
+    return arr.filter((el, ind) => ind !== minIndex);
+}
+
+/* Solution #1 */
+// function removeSmallest(arr) {
+//     let min = Math.min(...arr);
+//     let minIndex = arr.indexOf(min);
+//     return arr.slice(0, minIndex).concat(arr.slice(minIndex + 1));
+// }
+
 // Test cases
 console.log(removeSmallest([1, 2, 3, 4, 5])); // [2, 3, 4, 5]
 console.log(removeSmallest([5, 3, 2, 1, 4])); // [5, 3, 2, 4]

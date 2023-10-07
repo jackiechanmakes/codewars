@@ -16,6 +16,8 @@
  * As usual, your function/method should be pure, i.e. it should not mutate the original string.
  */
 
+
+
 // Test cases
 console.log("hello world".toAlternatingCase());                           // "HELLO WORLD"
 console.log("HELLO WORLD".toAlternatingCase());                           // "hello world"

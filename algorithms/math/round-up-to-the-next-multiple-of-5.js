@@ -18,6 +18,29 @@
  * You can assume that all inputs are valid integers.
  */
 
+/* Solution #3 */
+// function roundToNext5(num) {
+//     return Math.ceil(num / 5) * 5;
+// }
+
+/* Solution # 2 */
+function roundToNext5(num) {
+    while (num % 5 != 0) {
+        num++;
+    }
+
+    return num;
+}
+
+/* Solution #1 */
+// function roundToNext5(num) {
+//     if (num % 5 === 0) {
+//         return num;
+//     } else {
+//         return Math.floor(num / 5) * 5 + 5;
+//     }
+// }
+
 // Test cases
 
 console.log(roundToNext5(0));    // 0

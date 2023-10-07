@@ -7,6 +7,10 @@
  * "double  spaces"      ==> "elbuod  secaps"
  */
 
+function reverseWords(str) {
+    return str.split(' ').map(el => el.split('').reverse().join('')).join(' ');
+}
+
 // Test cases
 console.log(reverseWords('The quick brown fox jumps over the lazy dog.')); // 'ehT kciuq nworb xof spmuj revo eht yzal .god'
 console.log(reverseWords('apple'));                                        // 'elppa'

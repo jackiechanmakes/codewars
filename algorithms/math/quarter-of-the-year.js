@@ -10,6 +10,20 @@
  * 1 <= month <= 12
  */
 
+/* Solution #2 */
+function quarterOf(num) {
+    return Math.ceil (num / 3);
+}
+
+/* Solution #1 */
+// function quarterOf(num) {
+//     return 1 <= num && num <= 3 ? 1 :
+//            4 <= num && num <= 6 ? 2 :
+//            7 <= num && num <= 9 ? 3 :
+//            10 <= num && num <= 12 ? 4 :
+//            0;
+// }
+
 // Test cases
 console.log(quarterOf(3));   // 1
 console.log(quarterOf(8));   // 3

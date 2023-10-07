@@ -11,6 +11,10 @@
  * [17, 17, 3, 17, 17, 17, 17] ==> 3
  */
 
+function stray(numbers) {
+    return numbers.reduce((accu, curr) => numbers.indexOf(curr) === numbers.lastIndexOf(curr) ? accu + curr : accu, 0);
+}
+
 // Test cases
 console.log(stray([1, 1, 2]));  // 2
 console.log(stray([1, 2, 1]));  // 2

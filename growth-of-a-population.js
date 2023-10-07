@@ -32,7 +32,20 @@
  * if the parameter percent is 2 you have to convert it to 0.02.
  */
 
+function nbYear(p0, percent, aug, populationTarget) {
+    let count = 0;
+    percent = percent / 100;
+    let population = p0;
+
+    while (population < populationTarget) {
+        population = population + population * percent + aug;
+        count++;
+    }
+
+    return count;
+}
+
 // Test cases
-console.log(nbYear(1500, 5, 100, 5000));           // 156
-console.log(nbYear(1500000, 2.5, 10000, 2000000)); // 106
-console.log(nbYear(1500000, 0.25, 1000, 2000000)); // 946
+console.log(nbYear(1500, 5, 100, 5000));           // 15
+console.log(nbYear(1500000, 2.5, 10000, 2000000)); // 10
+console.log(nbYear(1500000, 0.25, 1000, 2000000)); // 94

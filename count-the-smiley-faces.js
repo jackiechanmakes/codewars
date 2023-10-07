@@ -24,6 +24,29 @@
  * Order of the face (eyes, nose, mouth) elements will always be the same.
  */
 
+function countSmileys(arr) {
+    return arr.reduce(
+        function(accu, curr) {
+            if (!(curr.length === 2 || curr.length === 3)) {
+                return accu;
+            } else {
+                let eyes = curr[0];
+                let mouth = curr[curr.length - 1];
+                let nose;
+
+                if (curr.length === 3) {
+                    nose = curr[1];
+                }
+
+                return !(eyes === ':' || eyes === ';')
+                ? accu : !(nose === undefined || nose === '-' || nose === '~')
+                ? accu : !(mouth === ')' || mouth === 'D')
+                ? accu : accu + 1;
+            }
+        }
+    , 0);
+}
+
 // Test cases
 console.log(countSmileys([]                             ));  // 0
 console.log(countSmileys([':D',':~)',';~D',':)']        ));  // 4

@@ -16,6 +16,32 @@
  * will be in the same case as those provided, and some elements may be repeated.
  */
 
+/* Solution #3 */
+// function gooseFilter(arr) {
+//     let geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+//     return arr.filter(el => geese.indexOf(el) < 0);
+// }
+
+/* Solution #2 */
+function gooseFilter(arr) {
+    let geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+    return arr.filter(el => !geese.includes(el));
+}
+
+/* Solution #1 */
+// function gooseFilter(arr) {
+//     let geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+
+//     return arr.filter(
+//         function(el) {
+//             for (let i = 0; i < geese.length; i++) {
+//                 let goose = geese[i];
+//                 if (el === goose) return false;
+//             }
+//             return true;
+//     });
+// }
+
 // Test cases
 console.log(gooseFilter(["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"])); // ["Mallard", "Hook Bill", "Crested", "Blue Swedish"]
 console.log(gooseFilter(["Mallard", "Barbary", "Hook Bill", "Blue Swedish", "Crested"]));                        // ["Mallard", "Barbary", "Hook Bill", "Blue Swedish", "Crested"]
