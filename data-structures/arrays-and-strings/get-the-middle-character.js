@@ -17,6 +17,25 @@
  * The middle character(s) of the word represented as a string.
  */
 
+/* Solution #2 */
+function getMiddle(s)
+{
+  return s.substr(Math.ceil(s.length / 2 - 1), s.length % 2 === 0 ? 2 : 1);
+}
+
+/* Solutioin #1 */
+// function getMiddle(s)
+// {
+//   let middle = s.length / 2;
+//   let middleCheck = Math.floor(middle);
+
+//   if (middle !== middleCheck) {
+//     return s[middleCheck];
+//   }
+
+//   return s[middle-1] + s[middle];
+// }
+
 // Test cases
 console.log(getMiddle("test"));      // "es"
 console.log(getMiddle("testing"));   // "t"

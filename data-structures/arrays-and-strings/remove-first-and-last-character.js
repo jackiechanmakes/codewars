@@ -5,6 +5,17 @@
  * You don't have to worry with strings with less than two characters.
  */
 
+/* Solution #2 */
+function removeChar(str) {
+    return str.slice(1, -1);
+}
+
+/* Solution #1 */
+// function removeChar(str){
+//     return str.slice(1, str.length - 1);
+// };
+
+
 // Test cases
 console.log(removeChar('eloquent')); // 'loquen'
 console.log(removeChar('country'));  // 'ountr'

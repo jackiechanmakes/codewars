@@ -15,6 +15,18 @@
  * 114 --> -1 since 114 is not a perfect square
  */
 
+/* Solution #2 */
+function findNextSquare(sq) {
+    return Math.sqrt(sq) % 1 ? -1 : Math.pow(Math.sqrt(sq) + 1, 2);
+}
+
+/* Solution #1 */
+// function findNextSquare(num) {
+//     let sqrt = Math.sqrt(num);
+
+//     return sqrt === Math.floor(sqrt) ? (sqrt + 1) * (sqrt + 1) : -1;
+// }
+
 // Test cases
 console.log(findNextSquare(121));           // 144
 console.log(findNextSquare(625));           // 676

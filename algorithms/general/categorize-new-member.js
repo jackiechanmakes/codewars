@@ -18,6 +18,22 @@
  * output = ["Open", "Open", "Senior", "Open", "Open", "Senior"]
  */
 
+/* Solution #2 */
+function openOrSenior(data){
+    return data.map(([age, handicap]) => (age > 54 && handicap > 7) ? 'Senior' : 'Open');
+}
+
+/* Solution #1 */
+// function openOrSenior(data){
+//     return data.map(
+//       function(member) {
+//         let age = member[0];
+//         let handicap = member[1];
+//         return 55 <= age && 7 < handicap ? "Senior" : "Open";
+//     });
+// }
+
+
 // Test cases
 console.log(openOrSenior([[45, 12],[55,21],[19, -2],[104, 20]])); // ['Open', 'Senior', 'Open', 'Senior']
 console.log(openOrSenior([[3, 12],[55,1],[91, -2],[53, 23]]));    // ['Open', 'Open', 'Open', 'Open']
